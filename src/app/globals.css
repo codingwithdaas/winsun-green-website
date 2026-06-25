@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand green — sampled directly from WinSun brochure logo & headings */
+  --green-50: #F0F7E6;
+  --green-100: #D5E9BE;
+  --green-200: #B2D58A;
+  --green-400: #A8D47A;
+  --green-500: #8AC04B;
+  --green-600: #74A83B;
+  --green-700: #5C8A2E;
+  --green-900: #3A5A1C;
+
+  /* Charcoal slate — sampled from brochure dark panels & wordmark */
+  --slate-900: #36434F;
+  --slate-800: #414F5C;
+  --slate-700: #4A5966;
+  --slate-600: #5A6873;
+  --slate-400: #8A95A0;
+
+  --gray-50: #F7F8F6;
+  --gray-100: #EBF3F6;
+  --line: #E7EAE5;
+
+  --background: #ffffff;
+  --foreground: #36433F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-green-400: var(--green-400);
+  --color-green-500: var(--green-500);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+  --color-green-900: var(--green-900);
+
+  --color-slate-900: var(--slate-900);
+  --color-slate-800: var(--slate-800);
+  --color-slate-700: var(--slate-700);
+  --color-slate-600: var(--slate-600);
+  --color-slate-400: var(--slate-400);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-line: var(--line);
+
+  --font-display: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* signature cut-corner card motif, used across the site */
+.cut-corner {
+  border-radius: 28px;
+  border-top-right-radius: 56px;
+}
+.cut-corner-sm {
+  border-radius: 20px;
+  border-top-right-radius: 40px;
+}
