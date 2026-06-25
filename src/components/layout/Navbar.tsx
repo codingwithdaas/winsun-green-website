@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X, Sun } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 const serviceLinks = [
   { label: "Wind solutions", href: "/services#wind" },
@@ -31,10 +32,8 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-line/70 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex h-[84px] items-center justify-between px-6 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5 font-display text-[20px] font-extrabold text-slate-900">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500 text-white">
-            <Sun className="h-5 w-5" strokeWidth={2.25} />
-          </span>
-          WinSun Green
+          <Image src="/winsun-green-logo.png" alt="WinSun Green" width={56} height={56} />
+            WinSun Green
         </Link>
 
         <ul className="hidden items-center gap-7 font-display text-[14.5px] font-semibold lg:flex">

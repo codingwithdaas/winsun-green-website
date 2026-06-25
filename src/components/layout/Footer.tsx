@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Sun, Mail, Phone, MapPin } from "lucide-react";
 import { company } from "@/data/company";
+import Image from "next/image";
 
 const companyLinks = [
   { label: "About us", href: "/about" },
@@ -29,9 +30,7 @@ export function Footer() {
         <div className="grid gap-10 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <div className="mb-3.5 flex items-center gap-2.5 font-display text-[20px] font-extrabold text-white">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-white">
-                <Sun className="h-4.5 w-4.5" strokeWidth={2.25} />
-              </span>
+              <Image src="/winsun-green-logo.png" alt="WinSun Green" width={50} height={50} />
               WinSun Green
             </div>
             <p className="max-w-[280px] text-[14px]">
