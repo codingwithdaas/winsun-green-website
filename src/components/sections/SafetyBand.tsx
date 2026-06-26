@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/motion";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import Image from "next/image";
 import { safetyPoints } from "@/data/company";
 
 export function SafetyBand() {
@@ -50,9 +50,14 @@ export function SafetyBand() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportOnce}
-            className="aspect-[5/4]"
+            className="relative aspect-[5/4] overflow-hidden rounded-[28px]"
           >
-            <PlaceholderImage label="Field technicians in PPE" dark />
+            <Image 
+              src="/safety-band-image.png" 
+              alt="Field technicians in PPE" 
+              fill 
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </div>
