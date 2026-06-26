@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn } from "@/lib/motion";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -52,8 +52,13 @@ export function Hero() {
             animate="visible"
             className="relative"
           >
-            <div className="aspect-[4/5]">
-              <PlaceholderImage label="Hero photo — wind turbines & solar field at sunset" />
+            <div className="aspect-[4/5] overflow-hidden rounded-[28px] bg-slate-100">
+              <Image 
+              src="/hero-panel-turbine-sunset.png" 
+              alt="Wind turbines and solar panels at sunset" 
+              fill 
+              className="object-cover"
+              priority/>
             </div>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
