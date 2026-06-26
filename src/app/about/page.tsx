@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Eye, Target } from "lucide-react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import Image from "next/image";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { AssetMapTable } from "@/components/sections/AssetMapTable";
 import { company, coreValues, journey } from "@/data/company";
@@ -35,8 +35,12 @@ export default function AboutPage() {
               </h2>
               <p className="mt-4 text-lg text-slate-600">{company.about}</p>
             </div>
-            <div className="aspect-[5/4]">
-              <PlaceholderImage label="Field team photo" />
+            <div className="overflow-hidden rounded-[28px] bg-gray-50">
+              <Image src="/about-us-pic.png" 
+              alt="Field team photo" 
+              width={600} 
+              height={480} 
+              className="rounded-2xl object-cover" />
             </div>
           </div>
         </div>
