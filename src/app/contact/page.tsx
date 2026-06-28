@@ -4,14 +4,13 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { company } from "@/data/company";
 import GoogleMap from "@/components/ui/GoogleMap";
+import { mapsEmbedUrl } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Contact Us — Request a Free Quote",
   description:
     "Get in touch with WinSun Green for wind, solar, SEM or transformer EPC and O&M requirements. Office in Pimpri Chinchwad, Pune.",
 };
-
-export const mapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1890.2292348566332!2d73.79701093878099!3d18.643411637084352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b834510cd9fd%3A0x64d9b9cc8683146c!2sKP%20Square%2C%20Telco%20Rd%2C%20opposite%20Doubletree%20Hotel%2C%20Indira%20Nagar%2C%20Mohan%20Nagar%2C%20MIDC%2C%20Chinchwad%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411019%2C%20India!5e0!3m2!1sen!2sus!4v1782499876613!5m2!1sen!2sus";
 
 export default function ContactPage() {
   return (
