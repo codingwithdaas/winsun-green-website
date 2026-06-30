@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/motion";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type ServiceDetailBlockProps = {
@@ -12,6 +13,7 @@ type ServiceDetailBlockProps = {
   description: string;
   bullets: readonly string[];
   imageLabel: string;
+  imageSrc?: string;        // ← add this line
   reverse?: boolean;
   stats?: readonly { value: string; label: string }[];
   children?: React.ReactNode;
@@ -24,6 +26,7 @@ export function ServiceDetailBlock({
   description,
   bullets,
   imageLabel,
+  imageSrc,
   reverse,
   stats,
   children,
@@ -70,9 +73,18 @@ export function ServiceDetailBlock({
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className={cn("aspect-[5/4]", reverse ? "lg:order-1" : "")}
+          className={cn("relative aspect-[5/4] overflow-hidden rounded-[24px]", reverse ? "lg:order-1" : "")}
         >
-          <PlaceholderImage label={imageLabel} />
+          {imageSrc ? (
+            <Image
+              src={imageSrc}
+              alt={imageLabel}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <PlaceholderImage label={imageLabel} />
+          )}
         </motion.div>
       </div>
 

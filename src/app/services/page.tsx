@@ -40,6 +40,7 @@ export default function ServicesPage() {
 
           <ServiceDetailBlock
             id="wind"
+            imageSrc="/winsun-green-wind.jpg"
             eyebrow={windServices.eyebrow}
             title={windServices.title}
             description={windServices.description}
@@ -58,6 +59,7 @@ export default function ServicesPage() {
 
           <ServiceDetailBlock
             id="solar"
+            imageSrc="/services/solar-panels.jpg"
             eyebrow={solarServices.eyebrow}
             title={solarServices.title}
             description={solarServices.description}
@@ -107,6 +109,7 @@ export default function ServicesPage() {
             title={semServices.title}
             description={semServices.description}
             bullets={semServices.bullets}
+            imageSrc="/services/sem-installation.jpg"
             imageLabel="Special energy meter installation"
           >
             <div className="mb-20">

@@ -52,13 +52,15 @@ export function Hero() {
             animate="visible"
             className="relative"
           >
-            <div className="aspect-[4/5] overflow-hidden rounded-[28px] bg-slate-100">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-slate-100">
               <Image 
               src="/hero-panel-turbine-sunset.png" 
               alt="Wind turbines and solar panels at sunset" 
               fill 
               className="object-cover"
-              priority/>
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
