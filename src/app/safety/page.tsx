@@ -3,6 +3,7 @@ import { ShieldCheck, HardHat, AlertTriangle, GraduationCap, ClipboardCheck, Sir
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import Image from "next/image";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { safetyPoints } from "@/data/company";
 
@@ -82,8 +83,14 @@ export default function SafetyPage() {
                 ))}
               </div>
             </div>
-            <div className="aspect-[5/4]">
-              <PlaceholderImage label="Field technicians in PPE" />
+            <div className="relative aspect-[5/4] overflow-hidden rounded-[24px]">
+              <Image
+                src="/safety-band-image.png"
+                alt="Field technicians in PPE"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                />
             </div>
           </div>
         </div>
