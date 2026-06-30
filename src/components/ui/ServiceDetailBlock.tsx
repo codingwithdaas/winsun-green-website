@@ -81,6 +81,7 @@ export function ServiceDetailBlock({
               alt={imageLabel}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           ) : (
             <PlaceholderImage label={imageLabel} />
