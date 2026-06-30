@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ShieldCheck, HardHat, AlertTriangle, GraduationCap, ClipboardCheck, Siren } from "lucide-react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import Image from "next/image";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { safetyPoints } from "@/data/company";
