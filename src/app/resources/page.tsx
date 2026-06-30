@@ -21,7 +21,7 @@ const downloads = [
     icon: Download,
     title: "Services brochure",
     description: "Wind, solar, SEM and transformer solutions at a glance.",
-    file: "WinSun-Green-Brochure.pdf",
+    file: "WinSun-Brochure-Desing-one-by-one-page.pdf",
   },
   {
     icon: BookOpen,
@@ -69,9 +69,14 @@ export default function ResourcesPage() {
                 </div>
                 <h3 className="mb-2 text-[17px] font-bold">{doc.title}</h3>
                 <p className="mb-4 text-[14px] text-slate-600">{doc.description}</p>
-                <p className="text-[12px] text-slate-400">
-                  Placeholder — link to /{doc.file} once uploaded
-                </p>
+                <a
+                  href={`/${doc.file}`}
+                  download
+                  className="inline-flex items-center gap-1.5 text-[13px] font-bold text-green-700 hover:text-green-800"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download PDF
+                </a>
               </div>
             ))}
           </div>
