@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { staggerContainer, fadeUp, viewportOnce } from "@/lib/motion";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { clients } from "@/data/clients";
+import Image from "next/image";
 
 export function ClientLogos({ limit }: { limit?: number }) {
   const list = limit ? clients.slice(0, limit) : clients;
@@ -23,11 +24,25 @@ export function ClientLogos({ limit }: { limit?: number }) {
         >
           {list.map((client) => (
             <motion.div
-              key={client}
+              key={client.name}
               variants={fadeUp}
-              className="flex h-[78px] items-center justify-center rounded-[14px] border border-line bg-white px-3 text-center font-display text-[13px] font-bold text-slate-600"
-            >
-              {client}
+              className="relative flex h-[78px] items-center justify-center rounded-[14px] border border-line bg-white px-3"
+              >
+              {client.logo ? (
+                <div className="relative h-full w-full">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  className="max-h-full max-w-full object-contain p-4"
+                  sizes="(max-width: 768px) 50vw, 16vw"
+                />
+                </div>
+              ) : (
+                <span className="text-center font-display text-[13px] font-bold text-slate-600">
+                  {client.name}
+                </span>
+              )}
             </motion.div>
           ))}
         </motion.div>
