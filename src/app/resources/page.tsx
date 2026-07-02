@@ -34,18 +34,21 @@ const downloads = [
 const articles = [
   {
     tag: "Industry",
-    title: "What comprehensive O&M actually covers — and why it matters",
+    title: "India records historic 6.1 GW wind capacity addition in 2025–26",
     date: "Add publish date",
+    href: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2254626",
   },
   {
     tag: "Company news",
     title: "WinSun crosses 500+ MW under active wind & solar O&M",
     date: "Add publish date",
+    href: "",
   },
   {
     tag: "Technical",
-    title: "Drone inspection vs manual blade audits: a cost comparison",
+    title: " Drone-based inspection technologies for wind turbine blades — a technical review",
     date: "Add publish date",
+    href: "https://www.mdpi.com/2079-9292/14/2/227",
   },
 ];
 
@@ -99,7 +102,9 @@ export default function ResourcesPage() {
                 <p className="mb-2 font-display text-[12px] font-bold uppercase tracking-wide text-green-700">
                   {article.tag}
                 </p>
+                <a href={article.href} target="_blank" rel="noopener noreferrer" className="hover:text-green-700">
                 <h3 className="mb-3 text-[16px] font-bold leading-snug">{article.title}</h3>
+                </a>
                 <p className="text-[12.5px] text-slate-400">{article.date}</p>
               </div>
             ))}
