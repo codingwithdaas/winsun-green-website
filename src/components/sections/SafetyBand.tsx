@@ -55,7 +55,8 @@ export function SafetyBand() {
             <Image 
               src="/safety-band-image.png" 
               alt="Field technicians in PPE" 
-              fill 
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </motion.div>
