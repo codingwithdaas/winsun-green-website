@@ -4,7 +4,7 @@ import { company } from "@/data/company";
 import Image from "next/image";
 
 const companyLinks = [
-  { label: "About us", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Clients", href: "/clients" },
   { label: "Careers", href: "/careers" },

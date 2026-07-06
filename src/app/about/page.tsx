@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        crumb="About us"
+        crumb="About Us"
         title="Making future green, one asset at a time"
         description="WinSun is among India's leading renewable energy solutions providers, revolutionising and redefining the way sustainable energy sources are harnessed."
       />
