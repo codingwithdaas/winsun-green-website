@@ -1,103 +1,158 @@
-# WinSun Green — Corporate Website
+# WinSun Green Website
 
-Production Next.js website for **WinSun Green Pvt. Ltd.**, built with the
-App Router, TypeScript, Tailwind CSS v4, and Framer Motion.
+A modern, responsive corporate website built for **WinSun Green Pvt. Ltd.**, a renewable energy solutions company specializing in wind and solar energy services across India.
 
-## Getting started
+This project is being developed as part of my software development internship to modernize the company's online presence with improved performance, accessibility, SEO, and maintainability.
+
+---
+
+## About WinSun Green
+
+WinSun Green is a renewable energy solutions provider offering services including:
+
+- Wind Energy Solutions
+- Solar Energy Solutions
+- Operations & Maintenance (O&M)
+- Engineering, Procurement & Construction (EPC)
+- Renewable Energy Consulting
+
+Learn more at: https://winsungreen.com
+
+---
+
+## Features
+
+- Modern responsive design
+- Mobile-first layout
+- Fast page loading
+- SEO optimization
+- Reusable React components
+- TypeScript support
+- Clean and scalable architecture
+- Optimized images and assets
+- Accessibility improvements
+
+---
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- CSS
+- Git & GitHub
+
+---
+
+## Project Structure
+
+```
+app/
+components/
+public/
+styles/
+lib/
+```
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/codingwithdaas/winsun-green-website.git
+```
+
+### Install dependencies
 
 ```bash
 npm install
+```
+
+### Run the development server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Build for Production
 
 ```bash
-npm run build   # production build
-npm run start   # serve the production build
-npm run lint    # eslint
+npm run build
+npm start
 ```
 
-## Tech stack
+---
 
-- **Next.js 16** (App Router, static generation for every route)
-- **TypeScript**
-- **Tailwind CSS v4** (CSS-based theme in `src/app/globals.css`)
-- **Framer Motion** — scroll-in and hover animations throughout
-- **Lucide React** — icon set
+## Project Goals
 
-## Project structure
+- Redesign the company's digital presence
+- Improve user experience
+- Increase website performance
+- Improve search engine visibility
+- Showcase WinSun Green's renewable energy services
+- Create a maintainable codebase for future development
 
-```
-src/
-  app/                  Route segments — one folder per page
-    layout.tsx           Root layout: fonts, Navbar, Footer, global metadata
-    page.tsx              Home
-    about/, services/, projects/, clients/, safety/,
-    resources/, careers/, contact/, privacy-policy/, terms-of-service/
-    sitemap.ts, robots.ts
-  components/
-    layout/              Navbar, Footer
-    sections/             Page-section blocks (Hero, TrustBand, ProjectsGrid, ...)
-    ui/                   Small reusable primitives (Button, SectionHead, SpecTable, ...)
-  data/                  All real company/services/projects/clients content,
-                         typed and pulled directly from the WinSun brochure & profile deck
-  lib/                  Shared Framer Motion variants + cn() helper
-```
+---
 
-All page copy and stats live in `src/data/*.ts` — editing those files updates
-every page that references them, with no JSX hunting required.
+## Internship Project
 
-## Brand tokens
+This website is being developed as part of my **Software Engineering Internship at WinSun Green Pvt. Ltd.**
 
-Colors were sampled directly (pixel-level) from the WinSun brochure rather
-than guessed, and live in `src/app/globals.css`:
+The project focuses on building a modern corporate web presence using industry-standard web development practices, including:
 
-| Token | Hex | Source |
-|---|---|---|
-| `--green-500` | `#8AC04B` | Logo, headings, table headers, CTA pills |
-| `--slate-900` | `#36434F` | Dark panels, wordmark text |
-| `--gray-100` | `#EBF3F6` | Alternating table-row tint |
+* Responsive and mobile-first design
+* Component-based architecture
+* Search engine optimization (SEO)
+* Website performance optimization
+* Accessibility improvements
+* Scalable and maintainable frontend development
 
-The signature **cut-corner card** (`.cut-corner` / `.cut-corner-sm` classes
-in `globals.css`) is lifted from the brochure's cover design and reused
-across hero imagery, the safety section, and CTA bands.
+The goal is to create a fast, user-friendly platform that effectively showcases WinSun Green's renewable energy solutions and services.
 
-## Fonts
+---
 
-The layout currently loads **Manrope** (display/headings) and **Inter**
-(body) via a `<link>` tag in `src/app/layout.tsx`, because the sandbox this
-was built in has no network access to fonts.googleapis.com at build time.
+## Status
 
-On a machine/CI with normal internet access, switch to `next/font/google`
-for self-hosted, zero-layout-shift fonts — instructions are in a comment
-at the top of `layout.tsx`. It's a 5-line change.
+Coming soon.
 
-## Before launch — content checklist
+---
 
-Every placeholder is intentional and easy to find:
+## Screenshots
 
-- **Photos** — every `<PlaceholderImage label="..." />` marks a spot that
-  needs a real photo (hero shots, project photos, team photos, safety
-  photos). Search the codebase for `PlaceholderImage` to find all ~25 spots.
-  Replace with `next/image` + a real asset from `/public`.
-- **Client testimonials** (`/clients` page) — three placeholder quotes,
-  clearly marked, ready for real client quotes.
-- **Careers** — open roles list is illustrative; replace with live postings.
-- **Resources** — download cards link to placeholder filenames; upload the
-  real PDFs to `/public` and update `href`s.
-- **Contact form / Application form** — currently client-side only (shows a
-  success state on submit but doesn't send anywhere). Wire up to an email
-  service, CRM, or API route (`src/app/api/.../route.ts`) before launch.
-- **Google Maps embed** (`/contact`) — placeholder block; swap in a real
-  embed or `<iframe>` once you have the office's verified map link.
-- **Privacy Policy / Terms of Service** — placeholder legal copy; needs
-  review by your legal counsel before launch.
-- **Metadata** — `metadataBase` in `layout.tsx` assumes `https://www.winsun.co.in`;
-  confirm before deploying.
+Coming soon.
 
-## Deployment
+---
 
-Ready for Vercel: connect the repo and deploy with default settings (Next.js
-is auto-detected). No environment variables are required for the current
-feature set.
+## Contributing
+
+This repository is primarily maintained for the development of the WinSun Green corporate website.
+
+If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is proprietary and developed for **WinSun Green Pvt. Ltd.**
+
+All rights reserved unless otherwise specified.
+
+---
+
+## Developer
+
+**Keerat Singh**
+
+Software Engineering Intern
+
+GitHub: https://github.com/codingwithdaas
