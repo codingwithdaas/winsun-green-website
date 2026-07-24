@@ -44,7 +44,7 @@ export function Navbar() {
           </li>
           <li>
             <Link href="/about" className="transition-colors hover:text-green-700">
-              About us
+              About Us
             </Link>
           </li>
           <li className="group relative">
